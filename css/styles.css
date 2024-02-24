@@ -1,0 +1,338 @@
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300..500&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+ul,
+ol,
+ul li,
+ol li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  background-color: #1e1e1e;
+  color: #b3b3b3;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+a {
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+a:hover {
+  color: #d1ff4d;
+}
+
+.container {
+  width: 1596px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accent-text {
+  color: #caff33;
+}
+
+.header {
+  width: 1596px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 20px 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #262626;
+  border-radius: 100px;
+  background-color: #1c1c1c;
+}
+.header::before {
+  content: url("../img/header_bg.png");
+  display: block;
+  position: absolute;
+  left: -58px;
+  top: -183px;
+  z-index: -10;
+}
+.header .nav .nav__list {
+  display: flex;
+  gap: 26px;
+  transition: color 0.2s ease-in-out;
+}
+.header .nav .nav__list .nav__item :hover {
+  text-shadow: 0px 3px rgb(0, 0, 0);
+}
+.header .nav .nav__list .nav__item :active {
+  color: #92b925;
+}
+.header .register-btns .signUp {
+  transition: color 0.2s ease-in-out;
+}
+.header .register-btns .signUp:hover {
+  color: #caff33;
+}
+.header .register-btns .signUp:active {
+  color: #92b925;
+}
+.header .register-btns .login {
+  margin-left: 30px;
+  padding: 14px 30px;
+  border-radius: 82px;
+  background-color: #caff33;
+  color: #1c1c1c;
+  transition: background-color 0.2s ease-in-out;
+}
+.header .register-btns .login:hover {
+  background-color: #577504;
+}
+.header .register-btns .login:active {
+  background-color: #92b925;
+  transition: none;
+}
+
+.hero {
+  width: min(100%, 1920px);
+  padding: 100px 297px 100px 162px;
+  display: grid;
+  grid-template-columns: auto 515px;
+  gap: 120px;
+}
+
+.hero__welcome span {
+  padding: 10px 20px 10px 12px;
+  font-weight: 300;
+  line-height: 24px;
+  border-radius: 61px;
+  background-color: #262626;
+  color: #fff;
+}
+.hero__welcome span::before {
+  content: url("../img/prompt_logo.png");
+  margin-right: 8px;
+  position: relative;
+  top: 4px;
+}
+.hero__welcome h2 {
+  height: 216px;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+}
+.hero__welcome p {
+  font-weight: 300;
+  color: #e4e4e7;
+}
+.hero__welcome button {
+  margin-top: 50px;
+  padding: 18px 30px;
+  border-radius: 82px;
+  background-color: #caff33;
+  color: #1c1c1c;
+  transition: background-color 0.2s ease-in-out;
+}
+.hero__welcome button:hover {
+  background-color: #577504;
+}
+.hero__welcome button:active {
+  background-color: #92b925;
+}
+
+.hero__status {
+  padding: 35px;
+  border: 0.87px solid rgb(38, 38, 38);
+  border-radius: 10.4px;
+  background: linear-gradient(225.58deg, rgba(202, 255, 51, 0.02) 0.002%, rgb(26, 26, 26) 39.716%, #1e1e1e, rgba(202, 255, 51, 0.01));
+}
+.hero__status .hero__transactions h2 {
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.hero__status .hero__transactions .transaction {
+  padding: 14px 20px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  flex-direction: column;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  background-color: #1c1c1c;
+}
+.hero__status .hero__transactions .transaction h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+.hero__status .hero__transactions .transaction .transaction__name {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.hero__status .hero__transactions .transaction .transaction__sum {
+  justify-self: flex-end;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.moneyExchange h2 {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  font-weight: 500;
+}
+.moneyExchange .table-wrapper {
+  border: 0.87px solid rgb(38, 38, 38);
+  border-radius: 10px;
+}
+.moneyExchange .moneyExchange__table {
+  width: 100%;
+  background-color: #1c1c1c;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.moneyExchange .moneyExchange__table .moneyExchange__country {
+  width: 50%;
+  padding: 6px 18px;
+  border: 0.87px solid rgb(38, 38, 38);
+  font-size: 14px;
+  font-weight: 300;
+  color: #e4e4e7;
+}
+.moneyExchange .moneyExchange__table .moneyExchange__country .moneyExchange__countryCode.India::before {
+  content: url("../img/flagOfIndia_icon.png");
+  margin-right: 8px;
+  position: relative;
+  top: 12px;
+}
+.moneyExchange .moneyExchange__table .moneyExchange__country .moneyExchange__countryCode.USA::before {
+  content: url("../img/flagOfUSA_icon.png");
+  margin-right: 8px;
+  position: relative;
+  top: 12px;
+}
+.moneyExchange .moneyExchange__table .moneyExchange__rate {
+  padding: 26px 18px;
+  border: 0.87px solid rgb(38, 38, 38);
+  font-weight: 500;
+}
+.moneyExchange .moneyExchange__button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px 26px;
+  border-radius: 71px;
+  font-size: 16px;
+  background-color: #22251b;
+  color: #d1ff4d;
+  transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+.moneyExchange .moneyExchange__button:hover {
+  color: #1e1e1e;
+  background-color: #577504;
+}
+.moneyExchange .moneyExchange__button:active {
+  background-color: #92b925;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300..500&display=swap");
+
+body {
+  font-family: $font-main;
+  background-color: $eerie-black;
+  color: $nobel;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+a {
+  color: $absolute-white;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: $starship;
+  }
+}
+
+.container {
+  width: 1596px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accent-text {
+  color: $green-yellow;
+}
