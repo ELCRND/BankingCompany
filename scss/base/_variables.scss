@@ -1,3 +1,4 @@
+//fonts
 $font-main: "Lexend", sans-serif;
 
 // colors
@@ -20,3 +21,22 @@ $log-cabin: #22251b;
 //borders
 
 $regular-border: 1px solid rgb(38, 38, 38);
+
+//extends
+
+%icon-bg-external {
+  border-radius: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(202, 255, 51, 0.05),
+    rgba(202, 255, 51, 0) 100%
+  );
+}
+%icon-bg-internal {
+  border-radius: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(202, 255, 51, 0.1) -66.216%,
+    rgba(202, 255, 51, 0) 85.461%
+  );
+}

@@ -11,10 +11,38 @@
     font-weight: 300;
   }
 }
+
 .use-cases__individuals {
   margin-top: 80px;
   margin-bottom: 60px;
+  .individuals__options-list {
+    position: relative;
+    &::before {
+      content: url("../img/useCases/bg/use_cases_bg.png");
+      width: 224px;
+      height: 213px;
+      position: absolute;
+      top: 0;
+      z-index: 0;
+    }
+  }
 }
+.use-cases__business {
+  .business__options-list {
+    position: relative;
+    &::before {
+      content: url("../img/useCases/bg/use_cases_bg.png");
+      width: 224px;
+      height: 213px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(90deg);
+      z-index: 0;
+    }
+  }
+}
+
 .use-cases__individuals,
 .use-cases__business {
   display: grid;
@@ -26,10 +54,37 @@
     padding: 50px;
     border-radius: 20px;
     display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     background-color: $eerie-black--light;
+    .option {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border: $regular-border;
+      border-radius: 16px;
+      background-color: #1a1a1a;
+      z-index: 10;
+
+      .option__image {
+        width: 78px;
+        height: 78px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @extend %icon-bg-external;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 58px;
+          height: 58px;
+          @extend %icon-bg-internal;
+        }
+      }
+    }
   }
 
   .details {
@@ -69,6 +124,16 @@
       border: $regular-border;
       border-radius: 82px;
       color: $absolute-white;
+      transition: background-color 0.125s ease-in-out,
+        border-color 0.125s ease-in-out;
+      &:hover {
+        background-color: rgb(26, 26, 26);
+        border-color: $green-yellow--hover;
+      }
+      &:active {
+        background-color: $eerie-black--veryLight;
+        border-color: $green-yellow--active;
+      }
     }
   }
 }

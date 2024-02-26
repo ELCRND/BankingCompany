@@ -1,0 +1,124 @@
+.our-testimonials {
+  .wrapper {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: min(100%, 910px) auto;
+  }
+  .our-testimonials__title {
+    margin-bottom: 14px;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 150%;
+    color: $absolute-white;
+  }
+  .our-testimonials__description {
+    grid-row: 2 / 3;
+    font-weight: 300;
+  }
+  .our-testimonials__plans {
+    width: fit-content;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 14px 5px;
+    border: $regular-border;
+    border-radius: 82px;
+    background-color: #1c1c1c;
+    label {
+      padding: 14px;
+    }
+    span {
+      padding: 14px 24px;
+    }
+
+    [type="radio"] {
+      display: none;
+    }
+    [type="radio"]:checked + span {
+      border-radius: 140px;
+      color: $eerie-black--light;
+      background-color: $green-yellow;
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+}
+
+.our-testimonials__cards-list {
+  display: flex;
+  gap: 80px;
+  .card {
+    width: 404px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 50px;
+    text-align: center;
+    color: $absolute-white;
+    .card__image {
+      justify-self: center;
+      width: 60px;
+      height: 60px;
+      background: url("../img/ourTestimonials/card_icon.svg");
+    }
+
+    .card__name {
+      color: $green-yellow;
+    }
+  }
+}
+
+.swiper-container {
+  display: flex;
+  position: relative;
+  .swiper-button-prev,
+  .swiper-button-next {
+    z-index: 20;
+  }
+  &::before {
+    content: "";
+    width: 600px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgb(30, 30, 30);
+    background: linear-gradient(
+      90deg,
+      rgba(30, 30, 30, 1) 0% 20%,
+      rgba(30, 30, 30, 0.9) 20% 80%,
+      rgba(30, 30, 30, 0.8) 85% 95%,
+      rgba(30, 30, 30, 0.3) 100%
+    );
+    z-index: 10;
+  }
+  &::after {
+    content: "";
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background: rgb(30, 30, 30);
+    background: linear-gradient(
+      -90deg,
+      rgba(30, 30, 30, 1) 0% 20%,
+      rgba(30, 30, 30, 0.9) 20% 80%,
+      rgba(30, 30, 30, 0.8) 85% 95%,
+      rgba(30, 30, 30, 0.3) 100%
+    );
+
+    z-index: 10;
+  }
+}
+.swiper__testimonials {
+  width: min(100%, 1372px);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  .swiper-wrapper {
+    .swiper-slide {
+    }
+  }
+}

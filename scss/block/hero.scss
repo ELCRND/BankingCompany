@@ -16,7 +16,7 @@
     color: $absolute-white;
 
     &::before {
-      content: url("../img/prompt_logo.png");
+      content: url("../img/hero/prompt_logo.png");
       margin-right: 8px;
       position: relative;
       top: 4px;
@@ -55,6 +55,7 @@
   position: relative;
   border: $regular-border;
   border-radius: 10.4px;
+
   background: linear-gradient(
     225.58deg,
     rgba(202, 255, 51, 0.02) 0.002%,
@@ -62,6 +63,14 @@
     $eerie-black,
     rgba(202, 255, 51, 0.01)
   );
+  background-color: $eerie-black;
+  &::after {
+    content: url("../img/hero/hero_bg.png");
+    position: absolute;
+    top: 10px;
+    right: -187px;
+    z-index: -10;
+  }
 
   .hero__transactions {
     h2 {
@@ -95,6 +104,7 @@
 }
 
 .moneyExchange {
+  position: relative;
   h2 {
     margin-top: 26px;
     margin-bottom: 26px;
@@ -120,7 +130,7 @@
       color: $mercury;
       .moneyExchange__countryCode.India {
         &::before {
-          content: url("../img/flagOfIndia_icon.png");
+          content: url("../img/hero/flagOfIndia_icon.png");
           margin-right: 8px;
           position: relative;
           top: 12px;
@@ -128,7 +138,7 @@
       }
       .moneyExchange__countryCode.USA {
         &::before {
-          content: url("../img/flagOfUSA_icon.png");
+          content: url("../img/hero/flagOfUSA_icon.png");
           margin-right: 8px;
           position: relative;
           top: 12px;
@@ -174,7 +184,7 @@
   top: -44px;
   left: -60px;
   &::before {
-    content: url("../img/plus_icon.svg");
+    content: url("../img/hero/plus_icon.svg");
     position: absolute;
     left: 17px;
   }
