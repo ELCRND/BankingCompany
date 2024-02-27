@@ -1,0 +1,113 @@
+.footer {
+  margin-top: 150px;
+  .footer__logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  .nav__list {
+    display: flex;
+    gap: 24px;
+    .nav__item {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      a {
+        color: #e4e4e7;
+        &:hover {
+          color: $absolute-white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.footer__address {
+  border-top: $regular-border;
+  border-bottom: $regular-border;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  .address__email,
+  .address__phone,
+  .address__location {
+    color: #e4e4e7;
+    &:hover {
+      text-decoration: underline;
+      transform: scale(1.02);
+      &::before {
+        filter: brightness(1.1);
+      }
+    }
+    &::before {
+      content: url("../img/footer/email_icon.svg");
+      margin-right: 5px;
+      position: relative;
+      top: 5px;
+    }
+  }
+  .address__phone {
+    &::before {
+      content: url("../img/footer/phone_icon.svg");
+    }
+  }
+  .address__location {
+    &::before {
+      content: url("../img/footer/location_icon.svg");
+    }
+  }
+}
+
+.footer__aside {
+  margin-top: 50px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  border: $regular-border;
+  border-radius: 100px;
+  background-color: rgb(26, 26, 26);
+
+  .footer__follow {
+    display: flex;
+    gap: 14px;
+    a {
+      width: 52px;
+      height: 52px;
+      padding: 14px;
+      border-radius: 100%;
+      background-color: $green-yellow;
+      &:hover {
+        img {
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+
+  span {
+    justify-self: center;
+  }
+
+  .footer__privacy-policy {
+    justify-self: flex-end;
+    display: flex;
+    gap: 12px;
+    a {
+      color: #b3b3b3;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    a:first-child {
+      padding-right: 12px;
+      border-right: 1px solid rgb(179, 179, 179);
+    }
+  }
+}

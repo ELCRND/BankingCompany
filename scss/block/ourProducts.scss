@@ -6,17 +6,10 @@
     grid-template-rows: auto auto;
     grid-template-columns: min(100%, 910px) auto;
 
-    .our-products__title {
-      margin-bottom: 14px;
-      font-size: 48px;
-      font-weight: 500;
-      line-height: 150%;
-      color: $absolute-white;
-    }
     .our-products__description {
       grid-row: 2 / 3;
-      font-weight: 300;
     }
+
     .our-products__plans {
       width: fit-content;
       grid-row: 2 / 3;
@@ -27,18 +20,25 @@
       border: $regular-border;
       border-radius: 82px;
       background-color: #1c1c1c;
+
       label {
         padding: 14px;
       }
+
       span {
         padding: 14px 24px;
+        border-radius: 140px;
+        transition: box-shadow 0.125s ease-in-out;
+        &:hover {
+          box-shadow: 0 0 0 1px inset $green-yellow;
+        }
       }
 
       [type="radio"] {
         display: none;
       }
+
       [type="radio"]:checked + span {
-        border-radius: 140px;
         color: $eerie-black--light;
         background-color: $green-yellow;
         transition: background-color 0.3s ease-in-out;
@@ -64,19 +64,25 @@
 .checking-accounts__image,
 .savings-accounts__image,
 .loans-mortgages__image {
-  position: relative;
-  width: 98px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98px;
-  @extend %icon-bg-external;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 98px;
+    height: 98px;
+    @extend %icon-bg-external;
+    animation: pulse 3s infinite ease-in-out 0.3s;
+  }
   &::after {
     content: "";
     position: absolute;
     width: 74px;
     height: 74px;
     @extend %icon-bg-internal;
+    animation: pulse 3s infinite ease-in-out;
   }
 }
 
@@ -92,6 +98,5 @@
 .checking-accounts__description,
 .savings-accounts__description,
 .loans-mortgages__description {
-  font-weight: 300;
   text-align: center;
 }

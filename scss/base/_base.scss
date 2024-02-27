@@ -18,15 +18,48 @@ a {
 }
 
 .container {
-  width: 1596px;
+  width: min(100%, 1596px);
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 1440px) {
+    width: min(100%, 1280px);
+  }
 }
 
 .accent-text {
   color: $green-yellow;
 }
+.block-title {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 150%;
+  color: $absolute-white;
+  @media screen and (max-width: 1440px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 38px;
+  }
+  @media screen and (max-width: 390px) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 28px;
+  }
+}
+.description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 150%;
+  color: $nobel;
+}
 
 .hidden {
   display: none !important;
+}
+::selection {
+  text-shadow: 0 0 1px red;
+  color: $green-yellow--active;
+  background-color: #353b26;
 }

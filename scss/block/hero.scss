@@ -1,13 +1,12 @@
 .hero {
-  width: min(100%, 1920px);
   padding: 100px 297px 100px 162px;
   display: grid;
-  grid-template-columns: auto 515px;
+  grid-template-columns: 1fr 515px;
   gap: 120px;
 }
 
 .hero__welcome {
-  span {
+  .hero__prompt {
     padding: 10px 20px 10px 12px;
     font-weight: 300;
     line-height: 24px;
@@ -22,18 +21,7 @@
       top: 4px;
     }
   }
-  h2 {
-    height: 216px;
-    margin-top: 20px;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 150%;
-    color: $absolute-white;
-  }
-  p {
-    font-weight: 300;
-    color: $mercury;
-  }
+
   button {
     margin-top: 50px;
     padding: 18px 30px;

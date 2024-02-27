@@ -1,13 +1,6 @@
 .FAQ {
   margin-top: 150px;
-  .FAQ__title {
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 150%;
-  }
-  .FAQ__description {
-    font-weight: 300;
-  }
+
   .FAQ__more-btn {
     margin-left: auto;
     margin-right: auto;
@@ -42,7 +35,7 @@
 .FAQ__list {
   margin-top: 80px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 30px;
   position: relative;

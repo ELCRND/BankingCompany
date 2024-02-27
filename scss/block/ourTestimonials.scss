@@ -1,21 +1,16 @@
 .our-testimonials {
+  margin-top: 150px;
   .wrapper {
     margin-bottom: 100px;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: min(100%, 910px) auto;
   }
-  .our-testimonials__title {
-    margin-bottom: 14px;
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 150%;
-    color: $absolute-white;
-  }
+
   .our-testimonials__description {
     grid-row: 2 / 3;
-    font-weight: 300;
   }
+
   .our-testimonials__plans {
     width: fit-content;
     grid-row: 2 / 3;
@@ -26,18 +21,25 @@
     border: $regular-border;
     border-radius: 82px;
     background-color: #1c1c1c;
+
     label {
       padding: 14px;
     }
+
     span {
       padding: 14px 24px;
+      border-radius: 140px;
+      transition: box-shadow 0.125s ease-in-out;
+      &:hover {
+        box-shadow: 0 0 0 1px inset $green-yellow;
+      }
     }
 
     [type="radio"] {
       display: none;
     }
+
     [type="radio"]:checked + span {
-      border-radius: 140px;
       color: $eerie-black--light;
       background-color: $green-yellow;
       transition: background-color 0.3s ease-in-out;
@@ -48,6 +50,7 @@
 .our-testimonials__cards-list {
   display: flex;
   gap: 80px;
+
   .card {
     width: 404px;
     height: 100%;
@@ -56,6 +59,7 @@
     gap: 50px;
     text-align: center;
     color: $absolute-white;
+
     .card__image {
       justify-self: center;
       width: 60px;
@@ -71,11 +75,34 @@
 
 .swiper-container {
   display: flex;
+  align-items: center;
   position: relative;
+
   .swiper-button-prev,
   .swiper-button-next {
+    width: 62px;
+    height: 62px;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: $regular-border;
+    border-radius: 100%;
+    background-color: $eerie-black--light;
     z-index: 20;
+    transition: background-color 0.125s ease-in-out;
+    &:hover {
+      background-color: #161616;
+    }
+    &:active {
+      border: $regular-border;
+      background-color: $eerie-black--veryLight;
+      path {
+        stroke: $green-yellow--active;
+      }
+    }
   }
+
   &::before {
     content: "";
     width: 600px;
@@ -87,11 +114,11 @@
       90deg,
       rgba(30, 30, 30, 1) 0% 20%,
       rgba(30, 30, 30, 0.9) 20% 80%,
-      rgba(30, 30, 30, 0.8) 85% 95%,
       rgba(30, 30, 30, 0.3) 100%
     );
     z-index: 10;
   }
+
   &::after {
     content: "";
     width: 500px;
@@ -99,22 +126,31 @@
     position: absolute;
     bottom: 0;
     right: 0;
-
     background: rgb(30, 30, 30);
     background: linear-gradient(
       -90deg,
-      rgba(30, 30, 30, 1) 0% 20%,
+      rgba(30, 30, 30, 0.9) 0% 20%,
       rgba(30, 30, 30, 0.9) 20% 80%,
-      rgba(30, 30, 30, 0.8) 85% 95%,
       rgba(30, 30, 30, 0.3) 100%
     );
 
     z-index: 10;
   }
 }
+
 .swiper__testimonials {
   width: min(100%, 1372px);
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+
+  .swiper-slide {
+    user-select: none;
+  }
+  .swiper-slide-active {
+    .card__image {
+      filter: drop-shadow(2px -2px 4px $starship);
+    }
+    user-select: text;
+  }
 }
