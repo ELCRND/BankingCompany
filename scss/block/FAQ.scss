@@ -1,7 +1,15 @@
 .FAQ {
   margin-top: 150px;
+  @media screen and (max-width: 1440px) {
+    margin-top: 120px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 80px;
+    text-align: center;
+  }
 
   .FAQ__more-btn {
+    margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -39,17 +47,31 @@
   grid-template-rows: auto;
   gap: 30px;
   position: relative;
+  @media screen and (max-width: 1440px) {
+    gap: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    text-align: start;
+    grid-template-columns: auto;
+  }
+
   .FAQ__card {
     padding: 50px;
     border: $regular-border;
     border-radius: 14px;
     background-color: rgb(26, 26, 26);
+    @media screen and (max-width: 1440px) {
+      padding: 40px;
+    }
     .card__quest {
       width: 100%;
       font-size: 20px;
       font-weight: 500;
       line-height: 25px;
       color: $absolute-white;
+      @media screen and (max-width: 1440px) {
+        font-size: 18px;
+      }
     }
     .card__reply {
       margin-top: 30px;

@@ -1,10 +1,24 @@
 .our-products {
   margin-top: 150px;
+  @media screen and (max-width: 1440px) {
+    margin-top: 120px;
+  }
   .wrapper {
     margin-bottom: 100px;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: min(100%, 910px) auto;
+    @media screen and (max-width: 1440px) {
+      grid-template-columns: auto auto;
+    }
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: auto;
+    }
+    @media screen and (max-width: 768px) {
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+    }
 
     .our-products__description {
       grid-row: 2 / 3;
@@ -18,19 +32,39 @@
       margin-left: auto;
       padding: 14px 5px;
       border: $regular-border;
+      background: linear-gradient($eerie-black, $eerie-black) padding-box,
+        linear-gradient(60deg, $log-cabin, #b6c585, $log-cabin) border-box;
+      border: 2px solid transparent;
       border-radius: 82px;
       background-color: #1c1c1c;
+      @media screen and (max-width: 1024px) {
+        grid-row: 3 / 4;
+      }
+      @media screen and (max-width: 768px) {
+        margin-right: auto;
+      }
 
       label {
         padding: 14px;
+        @media screen and (max-width: 1440px) {
+          padding: 12px;
+        }
+        @media screen and (max-width: 768px) {
+          align-items: center;
+          text-align: center;
+        }
       }
 
       span {
         padding: 14px 24px;
         border-radius: 140px;
         transition: box-shadow 0.125s ease-in-out;
+        text-wrap: nowrap;
         &:hover {
           box-shadow: 0 0 0 1px inset $green-yellow;
+        }
+        @media screen and (max-width: 1440px) {
+          padding: 10px 18px;
         }
       }
 
@@ -49,16 +83,44 @@
 
 .products {
   display: flex;
-  gap: 100px;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 }
 
 .checking-accounts,
 .savings-accounts,
 .loans-mortgages {
   width: calc(100% / 3);
+  margin-right: 50px;
+  padding-right: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-right: $regular-border;
+  @media screen and (max-width: 768px) {
+    width: 60vw;
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: $regular-border;
+  }
+  @media screen and (max-width: 390px) {
+    width: 100%;
+  }
+}
+.loans-mortgages {
+  border: none;
+  margin: 0;
+  @media screen and (max-width: 768px) {
+    border: none;
+    margin: 0;
+  }
 }
 
 .checking-accounts__image,
@@ -92,7 +154,11 @@
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 24px;
+  line-height: 150%;
   color: $absolute-white;
+  @media screen and (max-width: 1440px) {
+    font-size: 20px;
+  }
 }
 
 .checking-accounts__description,

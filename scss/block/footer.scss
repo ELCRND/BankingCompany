@@ -1,5 +1,8 @@
 .footer {
   margin-top: 150px;
+  @media screen and (max-width: 1440px) {
+    margin-top: 120px;
+  }
   .footer__logo {
     display: flex;
     justify-content: center;
@@ -9,6 +12,9 @@
 .footer__nav {
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 1440px) {
+    font-size: 16px;
+  }
   .nav__list {
     display: flex;
     gap: 24px;
@@ -31,9 +37,14 @@
   border-bottom: $regular-border;
   padding-top: 50px;
   padding-bottom: 50px;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: center;
   gap: 50px;
+  @media screen and (max-width: 768px) {
+    grid-auto-flow: row;
+    gap: 20px;
+  }
   .address__email,
   .address__phone,
   .address__location {
@@ -46,10 +57,18 @@
       }
     }
     &::before {
-      content: url("../img/footer/email_icon.svg");
+      content: "";
       margin-right: 5px;
       position: relative;
       top: 5px;
+    }
+    @media screen and (max-width: 1440px) {
+      font-size: 16px;
+    }
+  }
+  .address__email {
+    &::before {
+      content: url("../img/footer/email_icon.svg");
     }
   }
   .address__phone {
@@ -73,10 +92,16 @@
   border: $regular-border;
   border-radius: 100px;
   background-color: rgb(26, 26, 26);
+  @media screen and (max-width: 768px) {
+    grid-template-columns: auto;
+  }
 
   .footer__follow {
     display: flex;
     gap: 14px;
+    @media screen and (max-width: 768px) {
+      justify-self: center;
+    }
     a {
       width: 52px;
       height: 52px;
@@ -93,12 +118,18 @@
 
   span {
     justify-self: center;
+    @media screen and (max-width: 768px) {
+      justify-self: center;
+    }
   }
 
   .footer__privacy-policy {
     justify-self: flex-end;
     display: flex;
     gap: 12px;
+    @media screen and (max-width: 768px) {
+      justify-self: center;
+    }
     a {
       color: #b3b3b3;
       &:hover {

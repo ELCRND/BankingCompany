@@ -6,6 +6,9 @@ body {
   color: $nobel;
   font-size: 18px;
   line-height: 150%;
+  @media screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -24,6 +27,12 @@ a {
 
   @media screen and (max-width: 1440px) {
     width: min(100%, 1280px);
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -48,11 +57,18 @@ a {
     font-size: 28px;
   }
 }
+
 .description {
   font-size: 18px;
   font-weight: 300;
   line-height: 150%;
   color: $nobel;
+  @media screen and (max-width: 1440px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 390px) {
+    font-size: 14px;
+  }
 }
 
 .hidden {
@@ -62,4 +78,22 @@ a {
   text-shadow: 0 0 1px red;
   color: $green-yellow--active;
   background-color: #353b26;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  box-shadow: 0 0 5px 2px $green-yellow;
+  border-radius: 10px;
+}
+
+.shadow {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: $starship;
+  box-shadow: 0 0 70px 50px $starship;
+  opacity: 0.025;
+  z-index: -10;
+  transition: 0.09s linear;
 }

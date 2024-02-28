@@ -3,16 +3,34 @@
   display: grid;
   grid-template-columns: 1fr 515px;
   gap: 120px;
+  @media screen and (max-width: 1440px) {
+    padding: 60px 200px 60px 80px;
+    grid-template-columns: 1fr 410px;
+    gap: 100px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    grid-template-columns: auto;
+  }
 }
 
 .hero__welcome {
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
   .hero__prompt {
     padding: 10px 20px 10px 12px;
-    font-weight: 300;
-    line-height: 24px;
     border-radius: 61px;
     background-color: $eerie-black--veryLight;
     color: $absolute-white;
+    font-weight: 300;
+    line-height: 24px;
 
     &::before {
       content: url("../img/hero/prompt_logo.png");
@@ -35,6 +53,14 @@
     &:active {
       background-color: $green-yellow--active;
     }
+    @media screen and (max-width: 1440px) {
+      padding: 14px 24px;
+    }
+    @media screen and (max-width: 768px) {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -43,7 +69,7 @@
   position: relative;
   border: $regular-border;
   border-radius: 10.4px;
-
+  background-color: $eerie-black;
   background: linear-gradient(
     225.58deg,
     rgba(202, 255, 51, 0.02) 0.002%,
@@ -51,13 +77,34 @@
     $eerie-black,
     rgba(202, 255, 51, 0.01)
   );
-  background-color: $eerie-black;
+  @media screen and (max-width: 1440px) {
+    padding: 28px;
+  }
+  @media screen and (max-width: 768px) {
+    width: max(60vw, 305px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
   &::after {
     content: url("../img/hero/hero_bg.png");
     position: absolute;
     top: 10px;
     right: -187px;
     z-index: -10;
+    @media screen and (max-width: 1440px) {
+      content: url("../img/hero/hero_bg_laptop.png");
+      top: 6px;
+      right: -131px;
+    }
+    @media screen and (max-width: 1024px) {
+      content: "";
+    }
+    @media screen and (max-width: 768px) {
+      top: -19px;
+      right: -27px;
+      content: url("../img/hero/hero_bg_mobile.png");
+    }
   }
 
   .hero__transactions {
@@ -116,27 +163,43 @@
       font-size: 14px;
       font-weight: 300;
       color: $mercury;
-      .moneyExchange__countryCode.India {
+
+      .moneyExchange__countryCode {
+        font-size: 16px;
+        font-weight: 400;
+        color: $mercury;
+
         &::before {
-          content: url("../img/hero/flagOfIndia_icon.png");
-          margin-right: 8px;
+          content: "";
+          margin-right: 5px;
           position: relative;
           top: 12px;
+        }
+        @media screen and (max-width: 1440px) {
+          font-size: 12px;
         }
       }
-      .moneyExchange__countryCode.USA {
+      .India {
+        &::before {
+          content: url("../img/hero/flagOfIndia_icon.png");
+        }
+      }
+      .USA {
         &::before {
           content: url("../img/hero/flagOfUSA_icon.png");
-          margin-right: 8px;
-          position: relative;
-          top: 12px;
         }
+      }
+      @media screen and (max-width: 1440px) {
+        font-size: 11px;
       }
     }
     .moneyExchange__rate {
       padding: 26px 18px;
       border: $regular-border;
       font-weight: 500;
+      @media screen and (max-width: 1440px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -160,7 +223,6 @@
 }
 
 .monthlyIncome {
-  height: 75px;
   padding: 14px 18px 14px 64px;
   display: flex;
   flex-direction: column;
@@ -168,13 +230,27 @@
   background-color: $log-cabin;
   position: absolute;
   border: $regular-border;
-
   top: -44px;
   left: -60px;
+  @media screen and (max-width: 768px) {
+    left: 0;
+  }
   &::before {
     content: url("../img/hero/plus_icon.svg");
     position: absolute;
     left: 17px;
+    @media screen and (max-width: 1440px) {
+      left: 13px;
+    }
+    @media screen and (max-width: 768px) {
+      left: 8px;
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    padding: 11px 14px 11px 50px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 8px 10px 8px 50px;
   }
   span {
     margin-left: 5px;
@@ -183,6 +259,9 @@
       font-size: 14px;
       font-weight: 300;
       color: $mercury;
+      @media screen and (max-width: 1440px) {
+        font-size: 11px;
+      }
     }
   }
 }
@@ -201,6 +280,15 @@
   border: $regular-border;
   font-size: 16px;
   text-wrap: nowrap;
+  @media screen and (max-width: 1440px) {
+    padding: 7px 7px 7px 17px;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 5px 5px 5px 12px;
+    left: 0;
+    bottom: -76px;
+  }
 
   .currency__list {
     padding: 9px;
@@ -209,11 +297,15 @@
     background-color: $eerie-black--light;
     display: flex;
     gap: 7px;
+    @media screen and (max-width: 768px) {
+      padding: 5px;
+    }
     .currency__icon {
       width: 35px;
       height: 35px;
       display: flex;
       justify-content: center;
+      align-items: center;
       background: rgb(38, 38, 38);
       border-radius: 100%;
       cursor: pointer;
@@ -223,6 +315,11 @@
         path {
           fill: $green-yellow--hover;
         }
+      }
+      @media screen and (max-width: 1440px) {
+        width: 27px;
+        height: 27px;
+        padding: 7px;
       }
     }
   }

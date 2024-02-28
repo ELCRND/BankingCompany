@@ -1,5 +1,12 @@
 .use-cases {
   margin-top: 150px;
+  @media screen and (max-width: 1440px) {
+    margin-top: 120px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 80px;
+    text-align: center;
+  }
 }
 
 .use-cases__individuals {
@@ -9,21 +16,22 @@
     position: relative;
     &::before {
       content: url("../img/bg/use_cases_bg.png");
-      width: 224px;
-      height: 213px;
+      max-width: 224px;
+      max-height: 213px;
       position: absolute;
       top: 0;
       z-index: 0;
     }
   }
 }
+
 .use-cases__business {
   .business__options-list {
     position: relative;
     &::before {
       content: url("../img/bg/use_cases_bg.png");
-      width: 224px;
-      height: 213px;
+      max-width: 224px;
+      max-height: 213px;
       position: absolute;
       top: 0;
       right: 0;
@@ -38,94 +46,150 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
-
-  .individuals__options-list,
-  .business__options-list {
-    padding: 50px;
-    border-radius: 20px;
+  @media screen and (max-width: 1440px) {
+    gap: 60px;
+  }
+  @media screen and (max-width: 1024px) {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background-color: $eerie-black--light;
-    .option {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      border: $regular-border;
-      border-radius: 16px;
-      background-color: #1a1a1a;
-      z-index: 10;
+    grid-template-columns: auto;
+  }
+}
 
-      .option__image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 78px;
-          height: 78px;
-          @extend %icon-bg-internal;
-          animation: pulse-mini 4s infinite ease-in-out 0.3s;
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          width: 58px;
-          height: 58px;
-          @extend %icon-bg-internal;
-          animation: pulse-mini 4s infinite ease-in-out;
-        }
-      }
+.individuals__options-list,
+.business__options-list {
+  width: 100%;
+  padding: 50px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+  gap: 20px;
+  background-color: $eerie-black--light;
+  @media screen and (max-width: 1440px) {
+    padding: 40px;
+  }
+  @media screen and (max-width: 1024px) {
+    grid-row: 1 / 2;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 30px;
+    gap: 10px;
+    grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+  }
+}
+
+.option {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: $regular-border;
+  border-radius: 16px;
+  background-color: #1a1a1a;
+  text-align: center;
+  z-index: 10;
+  @media screen and (max-width: 1440px) {
+    padding: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 20px 14px;
+  }
+
+  .option__title {
+    margin-top: 38px;
+    font-size: 20px;
+    line-height: 150%;
+    color: $absolute-white;
+    @media screen and (max-width: 1440px) {
+      font-size: 34px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
+  .option__image {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      margin-top: 16px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 78px;
+      height: 78px;
+      @extend %icon-bg-internal;
+      animation: pulse-mini 4s infinite ease-in-out 0.3s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      @extend %icon-bg-internal;
+      animation: pulse-mini 4s infinite ease-in-out;
+    }
+  }
+}
+
+.details {
+  .details__title {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: 30px;
+    font-weight: 500;
+    color: $absolute-white;
+    @media screen and (max-width: 1440px) {
+      font-size: 26px;
     }
   }
 
-  .details {
-    .details__title {
-      margin-top: 14px;
-      margin-bottom: 14px;
-      font-size: 30px;
-      font-weight: 500;
-      color: $absolute-white;
+  .details__indicators {
+    margin-top: 62px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 60px;
     }
-
-    .details__indicators {
-      margin-top: 62px;
+    .indicator {
       display: flex;
-      gap: 100px;
-      .indicator {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        .indicator__num {
-          font-size: 58px;
-          font-weight: 500;
-          line-height: 150%;
-          color: $green-yellow;
+      flex-direction: column;
+      gap: 5px;
+
+      .indicator__num {
+        font-size: 58px;
+        font-weight: 500;
+        line-height: 150%;
+        color: $green-yellow;
+        @media screen and (max-width: 1440px) {
+          font-size: 40px;
         }
-        .indicator__text {
-          font-weight: 300;
-        }
+      }
+      .indicator__text {
+        font-weight: 300;
       }
     }
-    button {
-      margin-top: 62px;
-      padding: 18px 24px;
-      border: $regular-border;
-      border-radius: 82px;
-      color: $absolute-white;
-      transition: background-color 0.125s ease-in-out,
-        border-color 0.125s ease-in-out;
-      &:hover {
-        background-color: rgb(26, 26, 26);
-        border-color: $green-yellow--hover;
-      }
-      &:active {
-        background-color: $eerie-black--veryLight;
-        border-color: $green-yellow--active;
-      }
+  }
+  button {
+    margin-top: 62px;
+    padding: 18px 24px;
+    border: $regular-border;
+    border-radius: 82px;
+    color: $absolute-white;
+    transition: background-color 0.125s ease-in-out,
+      border-color 0.125s ease-in-out;
+    &:hover {
+      background-color: rgb(26, 26, 26);
+      border-color: $green-yellow--hover;
+    }
+    &:active {
+      background-color: $eerie-black--veryLight;
+      border-color: $green-yellow--active;
     }
   }
 }
