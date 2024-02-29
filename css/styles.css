@@ -1930,12 +1930,29 @@ input:focus-visible {
   grid-template-rows: 1fr;
   position: relative;
 }
+@media screen and (max-width: 1024px) {
+  .yourBank .yourBank__wrapper {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .yourBank .yourBank__wrapper {
+    padding: 14px;
+  }
+}
 .yourBank .yourBank__wrapper::after {
   content: url("../img/yourBank/welcome_bg.png");
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
   z-index: -10;
+}
+@media screen and (max-width: 1024px) {
+  .yourBank .yourBank__wrapper::after {
+    content: url("../img/yourBank/welcome_bg_mobile.png");
+    top: 30px;
+    right: 30px;
+  }
 }
 .yourBank .yourBank__wrapper .yourBank__welcome {
   width: 100%;
@@ -1944,17 +1961,46 @@ input:focus-visible {
   background-position: right;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 1024px) {
+  .yourBank .yourBank__wrapper .yourBank__welcome {
+    background-position: top center;
+    background-size: contain;
+    height: 1000px;
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  .yourBank .yourBank__wrapper .yourBank__welcome {
+    height: 650px;
+  }
+}
 .yourBank .yourBank__wrapper .yourBank__welcome .welcome__container {
   padding: 80px;
   background-color: rgb(26, 26, 26);
   width: 791px;
   border-radius: 20px 0px 80px 20px;
 }
+@media screen and (max-width: 1024px) {
+  .yourBank .yourBank__wrapper .yourBank__welcome .welcome__container {
+    border-radius: 20px;
+    align-self: flex-end;
+  }
+}
+@media screen and (max-width: 768px) {
+  .yourBank .yourBank__wrapper .yourBank__welcome .welcome__container {
+    padding: 24px;
+  }
+}
 .yourBank .yourBank__wrapper .yourBank__welcome .welcome__container .welcome__title {
   font-size: 58px;
   font-weight: 500;
   line-height: 130%;
   margin-bottom: 23px;
+}
+@media screen and (max-width: 768px) {
+  .yourBank .yourBank__wrapper .yourBank__welcome .welcome__container .welcome__title {
+    font-size: 28px;
+  }
 }
 
 .our-values {
@@ -1967,6 +2013,13 @@ input:focus-visible {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
 }
+@media screen and (max-width: 1024px) {
+  .our-values .our-values__cards {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    gap: 50px;
+  }
+}
 .our-values .our-values__cards .card {
   padding-left: 30px;
   border-left: 1px solid #caff33;
@@ -1976,6 +2029,11 @@ input:focus-visible {
   font-weight: 500;
   line-height: 150%;
   color: #4c4c4d;
+}
+@media screen and (max-width: 768px) {
+  .our-values .our-values__cards .card .card__title {
+    font-size: 30px;
+  }
 }
 
 .our-benefits {
@@ -1988,15 +2046,32 @@ input:focus-visible {
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 }
+@media screen and (max-width: 1024px) {
+  .our-benefits .our-benefits__cards {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .our-benefits .our-benefits__cards {
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+}
 .our-benefits .our-benefits__cards .card {
   padding: 50px;
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 98px auto;
+  align-items: center;
   gap: 20px;
   border-radius: 20px 50px 20px 50px;
   background: linear-gradient(149.36deg, rgba(202, 255, 51, 0.05) -30.105%, rgba(202, 255, 51, 0) 28.234%), linear-gradient(227.39deg, rgb(28, 28, 28) 40.71%, rgba(28, 28, 28, 0) 99.303%);
   border: 4px solid transparent;
+}
+@media screen and (max-width: 768px) {
+  .our-benefits .our-benefits__cards .card {
+    padding: 24px;
+  }
 }
 .our-benefits .our-benefits__cards .card .card__title {
   grid-column: 2/3;
@@ -2041,6 +2116,11 @@ input:focus-visible {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+@media screen and (max-width: 1024px) {
+  .job-openings .job-openings__vacancies {
+    grid-template-columns: auto;
+  }
+}
 
 .vacancy {
   padding: 50px;
@@ -2057,6 +2137,8 @@ input:focus-visible {
   color: #fff;
 }
 .vacancy .vacancy__filter {
+  display: inline-block;
+  margin-top: 10px;
   padding: 8px 16px;
   font-weight: 300;
   line-height: 150%;

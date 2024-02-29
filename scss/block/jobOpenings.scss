@@ -5,6 +5,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: auto;
+    }
   }
 }
 
@@ -22,6 +25,8 @@
     color: $absolute-white;
   }
   .vacancy__filter {
+    display: inline-block;
+    margin-top: 10px;
     padding: 8px 16px;
     font-weight: 300;
     line-height: 150%;

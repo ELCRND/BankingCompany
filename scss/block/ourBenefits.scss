@@ -6,11 +6,19 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
+    @media screen and (max-width: 1024px) {
+      gap: 50px;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-rows: auto;
+      grid-template-columns: auto;
+    }
     .card {
       padding: 50px;
       display: grid;
       grid-template-rows: auto auto;
       grid-template-columns: 98px auto;
+      align-items: center;
       gap: 20px;
       border-radius: 20px 50px 20px 50px;
       background: linear-gradient(
@@ -24,6 +32,9 @@
           rgba(28, 28, 28, 0) 99.303%
         );
       border: 4px solid transparent;
+      @media screen and (max-width: 768px) {
+        padding: 24px;
+      }
 
       .card__title {
         grid-column: 2 / 3;
