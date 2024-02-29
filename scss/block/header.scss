@@ -1,5 +1,5 @@
 .header {
-  width: min(100%, 1596px);
+  width: min(100%, 1666px);
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -91,13 +91,16 @@
 
 .show-menu {
   position: relative;
-  display: inline-block;
+  display: none;
   vertical-align: middle;
   width: 56px;
   height: 40px;
   background: $green-yellow;
   padding: 6px 14px;
   border-radius: 82px;
+  @media screen and (max-width: 390px) {
+    display: inline-block;
+  }
 
   .humb-btn {
     position: relative;
@@ -127,6 +130,55 @@
       width: 60%;
       top: 8px;
       left: 40%;
+    }
+  }
+}
+
+#menu {
+  width: max(375px, 100%);
+  height: 60%;
+  background: rgb(20, 50, 50);
+  padding: 40px 20px;
+  z-index: 100;
+  border-radius: 0 0 30px 30px;
+  transition: transform 0.5s ease-in-out;
+
+  &:not([open]) {
+    display: block;
+    transform: translateY(-2000px);
+  }
+  &[open] {
+    position: absolute;
+    top: 0;
+    transform: translateY(0);
+  }
+  .header__menu {
+    .menu__list {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      font-size: 28px;
+      .menu__item {
+        &::before {
+          content: "\27A3";
+          color: $starship;
+          margin-right: 5px;
+        }
+        :hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .menu__close-btn {
+    transform: scale(3);
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 100;
+    &:hover {
+      color: $starship;
     }
   }
 }

@@ -1,22 +1,20 @@
 .hero {
-  padding: 100px 297px 100px 162px;
-  display: grid;
-  grid-template-columns: 1fr 515px;
-  gap: 120px;
+  margin-top: 150px;
   @media screen and (max-width: 1440px) {
-    padding: 60px 200px 60px 80px;
-    grid-template-columns: 1fr 410px;
-    gap: 100px;
+    margin-top: 120px;
   }
-  @media screen and (max-width: 1024px) {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  @media screen and (max-width: 768px) {
-    padding-left: 16px;
-    padding-right: 16px;
-    width: 100%;
-    grid-template-columns: auto;
+  .hero__content {
+    display: grid;
+    grid-template-columns: minmax(auto, 826px) 515px;
+    gap: 120px;
+
+    @media screen and (max-width: 1440px) {
+      grid-template-columns: minmax(auto, 650px) 410px;
+      gap: 100px;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+    }
   }
 }
 
@@ -95,7 +93,7 @@
     @media screen and (max-width: 1440px) {
       content: url("../img/hero/hero_bg_laptop.png");
       top: 6px;
-      right: -131px;
+      right: -30px;
     }
     @media screen and (max-width: 1024px) {
       content: "";
@@ -168,7 +166,6 @@
         font-size: 16px;
         font-weight: 400;
         color: $mercury;
-
         &::before {
           content: "";
           margin-right: 5px;
@@ -283,11 +280,13 @@
   @media screen and (max-width: 1440px) {
     padding: 7px 7px 7px 17px;
     font-size: 12px;
+    left: 50px;
+  }
+  @media screen and (max-width: 1024px) {
+    bottom: -76px;
   }
   @media screen and (max-width: 768px) {
     padding: 5px 5px 5px 12px;
-    left: 0;
-    bottom: -76px;
   }
 
   .currency__list {

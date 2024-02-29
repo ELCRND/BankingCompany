@@ -1,0 +1,20 @@
+.our-values {
+  margin-top: 150px;
+  .our-values__cards {
+    margin-top: 80px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    .card {
+      padding-left: 30px;
+      border-left: 1px solid $green-yellow;
+      .card__title {
+        font-size: 58px;
+        font-weight: 500;
+        line-height: 150%;
+        color: #4c4c4d;
+      }
+    }
+  }
+}
