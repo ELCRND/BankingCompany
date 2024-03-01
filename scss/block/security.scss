@@ -1,6 +1,6 @@
-.yourBank {
+.security {
   margin-top: 53px;
-  .yourBank__wrapper {
+  .security__wrapper {
     padding: 50px;
     display: grid;
     grid-template-rows: 1fr;
@@ -13,21 +13,21 @@
     }
 
     &::after {
-      content: url("../img/yourBank/welcome_bg.png");
+      content: url("../img/security/welcome_bg.png");
       background-repeat: no-repeat;
       position: absolute;
       right: 0;
       z-index: -10;
       @media screen and (max-width: 1024px) {
-        content: url("../img/yourBank/welcome_bg_mobile.png");
+        content: url("../img/security/welcome_bg_mobile.png");
         top: 30px;
         right: 30px;
       }
     }
-    .yourBank__welcome {
+    .security__welcome {
       width: 100%;
       height: 716px;
-      background: url("../img/yourBank/welcome.png");
+      background: url("../img/security/security.png");
       background-position: right;
       background-repeat: no-repeat;
       @media screen and (max-width: 1440px) {
@@ -36,14 +36,14 @@
       @media screen and (max-width: 1024px) {
         background-position: top center;
         background-size: contain;
-        height: 800px;
+        height: 850px;
         display: flex;
       }
       @media screen and (max-width: 768px) {
-        height: 650px;
+        height: 720px;
       }
       @media screen and (max-width: 390px) {
-        height: 600px;
+        height: 670px;
       }
 
       .welcome__container {

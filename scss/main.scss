@@ -3,6 +3,8 @@
 @import "base/base";
 
 @import "block/header";
+@import "block/footer";
+
 @import "block/hero";
 @import "block/ourProducts";
 @import "block/useCases";
@@ -10,8 +12,18 @@
 @import "block/FAQ";
 @import "block/ourTestimonials";
 @import "block/startYourBank";
-@import "block/footer";
+
 @import "block/yourBank";
 @import "block/ourValues";
 @import "block/ourBenefits";
 @import "block/jobOpenings";
+
+@import "block/aboutBank";
+@import "block/missionAndVision";
+@import "block/pressReleases";
+
+@import "block/security";
+@import "block/protection";
+
+@import "block/login";
+@import "block/signUp";

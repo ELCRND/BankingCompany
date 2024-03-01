@@ -39,13 +39,17 @@
         <ol class="nav__list">
           <li class="nav__item"><a href="index.html">Home</a></li>
           <li class="nav__item"><a href="./pages/carees.html">Careers</a></li>
-          <li class="nav__item"><a href="#">About</a></li>
-          <li class="nav__item"><a href="#">Security</a></li>
+          <li class="nav__item"><a href="./pages/about.html">About</a></li>
+          <li class="nav__item">
+            <a href="./pages/security.html">Security</a>
+          </li>
         </ol>
       </nav>
       <div class="register-btns">
-        <button class="signUp">Sign Up</button>
-        <button class="login">Login</button>
+        <button class="signUp">
+          <a href="./pages/signUp.html">Sign Up</a>
+        </button>
+        <button class="login"><a href="./pages/login.html">Login</a></button>
         <button class="show-menu" onclick="window.menu.show()">
           <div class="humb-btn">
             <div class="line"></div>
@@ -65,10 +69,24 @@
               >
             </li>
             <li class="menu__item">
-              <a href="#" onclick="window.menu.close()">About</a>
+              <a href="./pages/about.html" onclick="window.menu.close()"
+                >About</a
+              >
             </li>
             <li class="menu__item">
-              <a href="#" onclick="window.menu.close()">Security</a>
+              <a href="./pages/security.html" onclick="window.menu.close()"
+                >Security</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="./pages/login.html" onclick="window.menu.close()"
+                >LogIn</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="./pages/signUp.html" onclick="window.menu.close()"
+                >SignUp</a
+              >
             </li>
           </ol>
         </nav>
@@ -77,6 +95,7 @@
         </button>
       </dialog>
     </header>
+
     <article class="hero">
       <div class="container">
         <div class="hero__content">
@@ -1305,8 +1324,10 @@
           <ol class="nav__list">
             <li class="nav__item"><a href="index.html">Home</a></li>
             <li class="nav__item"><a href="./pages/carees.html">Careers</a></li>
-            <li class="nav__item"><a href="#">About</a></li>
-            <li class="nav__item"><a href="#">Security</a></li>
+            <li class="nav__item"><a href="./pages/about.html">About</a></li>
+            <li class="nav__item">
+              <a href="./pages/security.html">Security</a>
+            </li>
           </ol>
         </nav>
         <address class="footer__address address">
@@ -1343,7 +1364,9 @@
         </aside>
       </div>
     </footer>
+
     <div class="shadow"></div>
+
     <script src="js/cursorShadow.js"></script>
     <script src="js/ourFeatures.js"></script>
     <script src="js/FAQ.js" type="module"></script>
