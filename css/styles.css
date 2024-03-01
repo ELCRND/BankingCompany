@@ -2357,6 +2357,9 @@ input:focus-visible {
     text-align: center;
   }
 }
+.mission-and-vision .mission {
+  margin-top: 80px;
+}
 .mission-and-vision .mission,
 .mission-and-vision .vision {
   position: relative;
