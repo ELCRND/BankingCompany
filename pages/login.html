@@ -47,12 +47,12 @@
         </ol>
       </nav>
       <div class="register-btns">
-        <button class="signUp"><a href="./signUp.html">Sign Up</a></button>
-        <button class="login"><a href="./login.html">Login</a></button>
+        <a href="./signUp.html" class="signUp">Sign Up</a>
+        <a href="./login.html" class="login">Login</a>
         <button class="show-menu" onclick="window.menu.show()">
-          <div class="humb-btn">
-            <div class="line"></div>
-          </div>
+          <span class="humb-btn">
+            <span class="line"></span>
+          </span>
         </button>
       </div>
 
@@ -102,7 +102,7 @@
         method="get"
         onsubmit="handleSubmit()"
       >
-        <label for="" class="login-page__email">
+        <label class="login-page__email">
           <input
             id="email"
             type="email"
@@ -110,9 +110,9 @@
             required
           />
           <span>Enter your Email</span>
-          <div class="emailInvalid">Поле должно содержать символ "@".</div>
+          <span class="emailInvalid">Поле должно содержать символ "@".</span>
         </label>
-        <label for="" class="login-page__password">
+        <label class="login-page__password">
           <input
             id="password"
             type="password"
@@ -165,9 +165,8 @@
         <button class="form-submit-btn" type="submit" form="login__form">
           Login
         </button>
-        <button class="login-page__signUp">
-          <a href="./signUp.html">Sign Up</a>
-        </button>
+
+        <a href="./signUp.html" class="login-page__signUp">Sign Up</a>
       </div>
       <div class="sub-content">
         <div class="continue-with">
