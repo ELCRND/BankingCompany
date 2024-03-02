@@ -817,7 +817,7 @@ input:focus-visible {
   text-align: center;
   color: #fff;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
   .our-testimonials__cards-list .card {
     width: 320px;
   }
