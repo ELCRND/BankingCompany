@@ -59,7 +59,7 @@
       &:active {
         color: $green-yellow--active;
       }
-      @media screen and (max-width: 390px) {
+      @media screen and (max-width: 768px) {
         display: none;
       }
     }
@@ -70,11 +70,8 @@
       background-color: $green-yellow;
       color: $eerie-black--light;
       transition: background-color 0.2s ease-in-out;
+
       @media screen and (max-width: 768px) {
-        margin-left: 20px;
-        padding: 12px 24px;
-      }
-      @media screen and (max-width: 390px) {
         display: none;
       }
 
@@ -101,7 +98,7 @@
   background: $green-yellow;
   padding: 6px 14px;
   border-radius: 82px;
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 768px) {
     display: inline-block;
   }
 
