@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>BankingCompany</title>
+    <link rel="shortcut icon" href="public/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -111,29 +112,60 @@
               financial goals. We are committed to delivering personalized and
               innovative services that prioritize our customers' needs.
             </p>
-            <button class="hero__account">Open Account</button>
+            <button class="hero__account">
+              <a href="./pages/login.html"> Open Account </a>
+            </button>
           </section>
           <article class="hero__status status">
             <section class="hero__transactions transactions">
               <h2>Your Transactions</h2>
 
-              <ul class="transactions__list">
-                <li class="transactions__item transaction">
-                  <h3>Transaction</h3>
-                  <span class="transaction__name">Joel Kenley</span>
-                  <span class="transaction__sum">-$68.00</span>
-                </li>
-                <li class="transactions__item transaction">
-                  <h3>Transaction</h3>
-                  <span class="transaction__name">Mark Smith</span>
-                  <span class="transaction__sum">-$68.00</span>
-                </li>
-                <li class="transactions__item transaction">
-                  <h3>Transaction</h3>
-                  <span class="transaction__name">Lenen Roy</span>
-                  <span class="transaction__sum">-$68.00</span>
-                </li>
-              </ul>
+              <div class="swiper-transactions">
+                <ul class="transactions__list swiper-wrapper">
+                  <li class="transactions__item transaction swiper-slide">
+                    <div class="transaction-info">
+                      <h3>Transaction</h3>
+                      <span class="transaction__name">Joel Kenley</span>
+                      <span class="transaction__sum">-$42.00</span>
+                    </div>
+                  </li>
+                  <li class="transactions__item transaction swiper-slide">
+                    <div class="transaction-info">
+                      <h3>Transaction</h3>
+                      <span class="transaction__name">Mark Smith</span>
+                      <span class="transaction__sum">-$56.00</span>
+                    </div>
+                  </li>
+                  <li class="transactions__item transaction swiper-slide">
+                    <div class="transaction-info">
+                      <h3>Transaction</h3>
+                      <span class="transaction__name">Lenen Roy</span>
+                      <span class="transaction__sum">-$34.00</span>
+                    </div>
+                  </li>
+                  <li class="transactions__item transaction swiper-slide">
+                    <div class="transaction-info">
+                      <h3>Transaction</h3>
+                      <span class="transaction__name">Lenen Roy2</span>
+                      <span class="transaction__sum">-$62.00</span>
+                    </div>
+                  </li>
+                  <li class="transactions__item transaction swiper-slide">
+                    <div class="transaction-info">
+                      <h3>Transaction</h3>
+                      <span class="transaction__name">Lenen Roy3</span>
+                      <span class="transaction__sum">-$63.00</span>
+                    </div>
+                  </li>
+                  <li class="transactions__item transaction swiper-slide">
+                    <div class="transaction-info">
+                      <h3>Transaction</h3>
+                      <span class="transaction__name">Lenen Roy4</span>
+                      <span class="transaction__sum">-$64.00</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </section>
 
             <div class="moneyExchange">
@@ -1286,7 +1318,9 @@
             us help you achieve your financial goals with our tailored solutions
             and exceptional customer service
           </p>
-          <button class="start-your-bank__login">Open Account</button>
+          <button class="start-your-bank__login">
+            <a href="./pages/login.html"> Open Account </a>
+          </button>
         </div>
       </div>
     </div>
@@ -1368,6 +1402,7 @@
     <div class="shadow"></div>
 
     <script src="js/cursorShadow.js"></script>
+    <script src="js/transactionsSwiper.js" type="module"></script>
     <script src="js/ourFeatures.js"></script>
     <script src="js/FAQ.js" type="module"></script>
     <script src="js/ourTestimonials.js" type="module"></script>

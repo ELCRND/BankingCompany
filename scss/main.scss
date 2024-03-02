@@ -2,28 +2,29 @@
 @import "base/variables";
 @import "base/base";
 
-@import "block/header";
-@import "block/footer";
+@import "pages/general/header";
+@import "pages/general/footer";
+@import "pages/general/FAQ";
+@import "pages/general/ourTestimonials";
+@import "pages/general/startYourBank";
 
-@import "block/hero";
-@import "block/ourProducts";
-@import "block/useCases";
-@import "block/ourFeatures";
-@import "block/FAQ";
-@import "block/ourTestimonials";
-@import "block/startYourBank";
+@import "pages/home/hero";
+@import "pages/home/ourProducts";
+@import "pages/home/useCases";
+@import "pages/home/ourFeatures";
 
-@import "block/yourBank";
-@import "block/ourValues";
-@import "block/ourBenefits";
-@import "block/jobOpenings";
+@import "pages/carees/yourBank";
+@import "pages/carees/ourValues";
+@import "pages/carees/ourBenefits";
+@import "pages/carees/jobOpenings";
 
-@import "block/aboutBank";
-@import "block/missionAndVision";
-@import "block/pressReleases";
+@import "pages/about/aboutBank";
+@import "pages/about/missionAndVision";
+@import "pages/about/pressReleases";
 
-@import "block/security";
-@import "block/protection";
+@import "pages/security/security";
+@import "pages/security/protection";
 
-@import "block/login";
-@import "block/signUp";
+@import "pages/login/login";
+
+@import "pages/signUp/signUp";
