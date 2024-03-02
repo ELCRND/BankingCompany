@@ -6,7 +6,7 @@
   "homepage": "https://github.com/ELCRND/BankingCompany",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy":"gh-pages -d index.html"
+    "deploy":"gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
