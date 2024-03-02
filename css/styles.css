@@ -391,6 +391,7 @@ input:focus-visible {
 .show-menu .humb-btn .line {
   width: 100%;
   height: 100%;
+  display: block;
   background: #333333;
 }
 .show-menu .humb-btn::after, .show-menu .humb-btn::before {
@@ -1093,33 +1094,34 @@ input:focus-visible {
   position: relative;
   top: 4px;
 }
-.hero__welcome button {
+.hero__welcome .hero__account {
   margin-top: 50px;
+  display: inline-block;
   padding: 18px 30px;
   border-radius: 82px;
   background-color: #caff33;
   color: #1c1c1c;
   transition: background-color 0.2s ease-in-out;
 }
-.hero__welcome button:hover {
+.hero__welcome .hero__account:hover {
   background-color: #577504;
 }
-.hero__welcome button:active {
+.hero__welcome .hero__account:active {
   background-color: #92b925;
 }
 @media screen and (max-width: 1440px) {
-  .hero__welcome button {
+  .hero__welcome .hero__account {
     padding: 14px 24px;
   }
 }
 @media screen and (max-width: 768px) {
-  .hero__welcome button {
+  .hero__welcome .hero__account {
     display: flex;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.hero__welcome button a {
+.hero__welcome .hero__account a {
   color: inherit;
 }
 
