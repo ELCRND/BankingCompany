@@ -794,7 +794,7 @@ input:focus-visible {
 }
 @media screen and (max-width: 1440px) {
   .our-testimonials .our-testimonials__plans span {
-    font-size: 10px 18px;
+    padding: 10px 18px;
   }
 }
 .our-testimonials .our-testimonials__plans [type=radio] {
@@ -1906,7 +1906,7 @@ input:focus-visible {
 .details__radio-btns .details__btn:hover {
   background-color: #1e1e1e;
 }
-.details__radio-btns .details__btn:has(:checked) {
+.details__radio-btns .details__btn:has(*:checked) {
   color: #caff33;
   background-color: #262626;
 }

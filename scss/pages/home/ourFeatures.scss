@@ -48,7 +48,7 @@
     &:hover {
       background-color: $eerie-black;
     }
-    &:has(:checked) {
+    &:has(*:checked) {
       color: $green-yellow;
       background-color: $eerie-black--veryLight;
     }
