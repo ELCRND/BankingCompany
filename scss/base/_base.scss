@@ -78,6 +78,10 @@ a {
 .hidden {
   display: none !important;
 }
+.opacity {
+  opacity: 0;
+}
+
 ::selection {
   text-shadow: 0 0 1px red;
   color: $green-yellow--active;

@@ -43,6 +43,7 @@ $regular-border: 1px solid rgb(38, 38, 38);
 
 //animations
 
+/* icon radial pulsation */
 @keyframes pulse {
   0% {
     transform: scale(0);
@@ -66,5 +67,141 @@ $regular-border: 1px solid rgb(38, 38, 38);
   100% {
     transform: scale(1);
     opacity: 0;
+  }
+}
+
+/* appearance */
+@keyframes fromBottom {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fromLeftTop {
+  0% {
+    transform: translate3d(-150px, -150px, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fromRigthTop {
+  0% {
+    transform: translate3d(150px, -150px, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fromLeftBottom {
+  0% {
+    transform: translate3d(-150px, 150px, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fromRightBottom {
+  0% {
+    transform: translate3d(150px, 150px, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes increaseToRight {
+  0% {
+    left: 50px;
+    width: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  75% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    width: auto;
+  }
+}
+
+//animation classes
+
+.appearanceFromBottom {
+  animation: fromBottom 2s linear;
+}
+
+.appearanceFromEdges {
+  > div:nth-child(1) {
+    animation: fromLeftTop 1s linear;
+  }
+  > div:nth-child(2) {
+    animation: fromRigthTop 1s linear;
+  }
+  > div:nth-child(3) {
+    animation: fromLeftBottom 1s linear;
+  }
+  > div:nth-child(4) {
+    animation: fromRightBottom 1s linear;
+  }
+}
+
+.increaseToRight {
+  > div:nth-child(1) {
+    animation: increaseToRight 1.5s linear;
+  }
+  > div:nth-child(2) {
+    animation: increaseToRight 1.5s linear;
+  }
+  > div:nth-child(3) {
+    animation: increaseToRight 1.5s linear;
+  }
+  > div:nth-child(4) {
+    animation: increaseToRight 1.5s linear;
   }
 }
