@@ -18,14 +18,14 @@
   }
 
   &::before {
-    content: url("../img/header/header_bg.png");
+    content: url("../img/header/header_bg.webp");
     display: block;
     position: absolute;
     left: -58px;
     top: -183px;
     z-index: -10;
     @media screen and (max-width: 768px) {
-      content: url("../img/header/header_bg_mobile.png");
+      content: url("../img/header/header_bg_mobile.webp");
       left: -32px;
       top: -34px;
     }

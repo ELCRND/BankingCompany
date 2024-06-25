@@ -31,7 +31,7 @@
     line-height: 24px;
 
     &::before {
-      content: url("../img/hero/prompt_logo.png");
+      content: url("../img/hero/prompt_logo.webp");
       margin-right: 8px;
       position: relative;
       top: 4px;
@@ -89,13 +89,13 @@
     padding: 20px;
   }
   &::after {
-    content: url("../img/hero/hero_bg.png");
+    content: url("../img/hero/hero_bg.webp");
     position: absolute;
     top: 10px;
     right: -187px;
     z-index: -10;
     @media screen and (max-width: 1440px) {
-      content: url("../img/hero/hero_bg_laptop.png");
+      content: url("../img/hero/hero_bg_laptop.webp");
       top: 6px;
       right: -30px;
     }
@@ -105,7 +105,7 @@
     @media screen and (max-width: 768px) {
       top: -19px;
       right: -27px;
-      content: url("../img/hero/hero_bg_mobile.png");
+      content: url("../img/hero/hero_bg_mobile.webp");
     }
   }
 
@@ -186,12 +186,12 @@
       }
       .India {
         &::before {
-          content: url("../img/hero/flagOfIndia_icon.png");
+          content: url("../img/hero/flagOfIndia_icon.webp");
         }
       }
       .USA {
         &::before {
-          content: url("../img/hero/flagOfUSA_icon.png");
+          content: url("../img/hero/flagOfUSA_icon.webp");
         }
       }
       @media screen and (max-width: 1440px) {
