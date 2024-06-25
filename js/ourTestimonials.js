@@ -1,6 +1,6 @@
-import Swiper from "../node_modules/swiper/swiper-bundle.mjs";
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-const swiper = new Swiper(".swiper__testimonials", {
+const swiperTestimonials = new Swiper(".swiper__testimonials", {
   slidesPerView: "auto",
   loop: true,
   free: true,
