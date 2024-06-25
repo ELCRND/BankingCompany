@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "scss":"sass --watch scss/main.scss:css/styles.css"
+    "scss": "sass --watch scss/main.scss:css/styles.css"
   },
   "devDependencies": {
     "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "swiper": "^11.1.4"
   }
 }

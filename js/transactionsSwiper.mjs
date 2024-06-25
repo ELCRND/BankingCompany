@@ -1,3 +1,4 @@
+import Swiper from "../node_modules/swiper/swiper-bundle.mjs";
 const swiper = new Swiper(".swiper-transactions", {
   slidesPerView: "auto",
   grabCursor: true,
