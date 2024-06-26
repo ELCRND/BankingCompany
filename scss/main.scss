@@ -3,10 +3,6 @@
 @import "base/base";
 
 @import "pages/general/header";
-@import "pages/general/footer";
-@import "pages/general/FAQ";
-@import "pages/general/ourTestimonials";
-@import "pages/general/startYourBank";
 
 @import "pages/home/hero";
 @import "pages/home/ourProducts";
@@ -28,3 +24,9 @@
 @import "pages/login/login";
 
 @import "pages/signUp/signUp";
+
+@import "pages/general/FAQ";
+@import "pages/general/ourTestimonials";
+@import "pages/general/startYourBank";
+
+@import "pages/general/footer";
